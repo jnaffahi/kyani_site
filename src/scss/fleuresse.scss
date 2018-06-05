@@ -1,0 +1,32 @@
+.internalBanner {
+    height: auto;
+    position: relative;
+    .InternalTitle {
+        //padding: 1.875rem 3rem 2.8125rem;
+        height: 6.25rem;
+        position: absolute;
+        top: 50%;
+        margin-top: -0.5rem;
+        h1 {
+            font-weight: bold;
+            text-transform: uppercase;
+            vertical-align: middle;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include up(font-size, 2.25rem, 3rem, 3rem, 3rem);
+            @include up(line-height, 1.5rem, 2.375rem, 2.6875rem, 2.6875rem);
+            span {
+                display: block;
+                @include up(font-size, 1.25rem, 2.25rem, 2.25rem, 2.25rem);
+            }
+        }
+    }
+    @include up(min-height, 14.375rem, 18.75rem, 27.5rem, 18.75rem);
+    &.bg01 {
+        background: url(../assets/img/dist/background-internal-banner-01.png) no-repeat center;
+        background-size: cover;
+    }
+}
+

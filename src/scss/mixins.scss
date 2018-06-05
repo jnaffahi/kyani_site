@@ -1,0 +1,300 @@
+@mixin up($property, $xs, $md, $lg, $xl) {
+    #{$property}: $xs;
+    @include media-breakpoint-up(md) {
+        #{$property}: $md;
+    }
+    @include media-breakpoint-up(lg) {
+        #{$property}: $lg;
+    }
+    @include media-breakpoint-up(xl) {
+        #{$property}: $xl;
+    }
+}
+
+@mixin home1-content {
+    background-color: $dark-shadow-color;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @include media-breakpoint-down(sm){
+        text-align: center;
+    }
+    h2 {
+        margin-right: 10px;
+        @include media-breakpoint-down(sm){
+            margin-bottom: 0.8rem;
+        }
+        @include media-breakpoint-up(md){
+            margin-bottom: 0;
+
+            /*span {
+                display: block;
+            }*/
+        }
+        span {
+            font-weight: 700;
+        }
+
+        @include up(font-size, 1.5625rem, 2rem, 2rem, 2rem);
+        @include up(line-height, 2.0625rem, 2.125rem, 2.125rem, 2.125rem);
+        a {
+            font-size: 14px;
+            display: inline-block;
+            text-decoration: underline;
+            vertical-align: bottom;
+        }
+    }
+    .a-r {
+        @include media-breakpoint-up(md){
+            text-align: right;
+        }
+
+        @include media-breakpoint-only(lg){
+            padding-top: 1.25rem;
+        }
+    }
+    a.ghost {
+        padding: 0.75rem 3.125rem 0.9375rem;
+        border: 0.0625rem solid #FFFFFF;
+        border-radius: 1.5625rem;
+        display: inline-block;
+    }
+
+    @include up(padding-top, 10px, 10px, 10px, 10px);
+    @include up(padding-right, 0, 15px, 15px, 5px);
+    @include up(padding-bottom, 10px, 10px, 10px, 10px);
+    @include up(padding-left, 0, 15px, 5px, 20px);
+}
+
+@mixin home-4-caring-company {
+
+    color: $blue;
+    .content {
+        padding: 1.375rem 0;
+        @include media-breakpoint-up(md){
+            padding-top: 0;
+            padding-bottom: 0;
+            
+            &.c1 {
+                padding-right: 2rem;
+
+                @include media-breakpoint-between(sm, md){
+                    border-bottom: 0 !important;
+                    padding-right: 0;
+                }
+            }
+
+            &.c2 {
+                padding-left: 2rem;
+            }
+        }
+    }
+
+    .caring {
+        img {
+            min-height: 9.5rem;
+            min-width: 9.6875rem;
+        }
+        @include up(padding-right, 1.5625rem, 1.5625rem, 1.5625rem, 2.8125rem);
+    }
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.375rem;
+        margin-bottom: 0.625rem;
+        @include up(font-size, 1rem, 1.25rem, 1.25rem, 1.25rem);
+    }
+
+    img {
+        max-width: 9.6875rem;
+        max-height: 9.5rem;
+    }
+
+    p {
+        color: $gray-text;
+        @include up(font-size, 1rem, 18px, 18px, 18px);
+        @include media-breakpoint-up(lg){
+            color: $gray-text3;
+        }
+    }
+}
+
+@mixin home-5-new {
+
+    div[class*="img-"]{
+        min-height: 11.125rem;
+        position: relative;
+
+        @include media-breakpoint-up(xl) {
+            min-height: 16.875rem;
+        }
+        .bottom-title {
+            padding: 0.625rem 5.625rem 0.625rem 0.4375rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1.1875rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            min-height: 3.5625rem;
+            background-color: $dark-shadow-color;
+
+            @include media-breakpoint-up(xl) {
+                min-height: 5.4375rem;
+                font-size: 1.25rem;
+                line-height: 1.6875rem;
+                padding: 0.625rem 6rem 0.625rem 1rem;
+            }
+
+            @media(min-width:106.25rem){
+                padding: 0.625rem 14rem 0.625rem 1rem;
+            }
+        }
+
+        .oval {
+            box-sizing: border-box;
+            height: 4rem;
+            width: 4rem;
+            border: 0.125rem solid $white;
+            background-color: $light-blue2;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -2rem;
+            right: 1.25rem;
+            text-align: center;
+            padding-top: 0.3rem;
+            z-index: 1;
+
+            p:nth-child(odd) {
+                font-size: 0.6875rem;
+                font-style: italic;
+                line-height: 0.9375rem;
+            }
+            p:nth-child(2) {
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: 1.4rem;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            @include media-breakpoint-only(md) {
+                bottom: 1rem;
+            }
+
+            @include media-breakpoint-up(xl) {
+                border-width: 0.25rem;
+                height: 6.75rem;
+                width: 6.75rem;
+                bottom: -3.5rem;
+
+                p:first-child {
+                    padding-top: 0.3rem;
+                }
+
+                p:nth-child(odd) {
+                    font-size: 0.875rem;
+                    font-style: italic;
+                    line-height: 1.1875rem;
+                }
+                p:nth-child(2) {
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+    }
+
+    .desc {
+        min-height: 9.625rem;
+        padding: 0.9375rem 1rem;
+        background-color: $gray-blue;
+		h3 {
+                color: #12273C;
+                font-size: 16px; 
+                font-weight: bold;
+                margin-top: 0;
+                margin-bottom: 15px;
+                padding: 0;
+                border: none;    
+                span {
+                    display: block;
+                    font-size: 1.125rem;
+                    color: $gray-text;
+                    font-weight: normal;
+                    padding-top: 6px;
+                }           
+            }
+        p {
+            font-size: 0.75rem;
+            line-height: 1.25rem;
+            color: $gray-text2;
+            margin-bottom: 0;
+
+            @include media-breakpoint-up(xl) {
+                font-size: 0.875rem;
+                color: $gray-text4;
+                line-height: 20px;                
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-top: 2.2rem;
+        }
+    }
+
+    > .container-fluid {
+
+        @include media-breakpoint-between(xs,sm){
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+@mixin dark($bg-color) {
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        border-color: darken($bg-color,10%);
+        background-color: darken($bg-color,10%);
+    }
+}
+
+@mixin dark-ghost($color) {
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color;
+        text-decoration: none;
+        color: darken($color,10%);
+        border-color: darken($color,10%);
+    }
+}
+
+@mixin dark-link($color){
+    &:hover,
+    &:active,
+    &:focus {
+        color: darken($color,10%);
+    }
+}
+
+@mixin gral-button {
+	background: $light-blue !important;
+	border-color: $light-blue !important;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	&:hover {
+		background: darken($light-blue,30%) !important;
+		border-color: darken($light-blue,30%) !important;
+	}
+}

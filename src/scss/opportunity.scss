@@ -1,0 +1,77 @@
+.singlePage {
+    .opportunity{
+        height: 100%;  
+        position: relative;
+        background-color: #EFEFEF;
+        padding-bottom: 40px;
+
+        &:after {
+            content: "";
+            display: block;
+            height: 60px;
+            width: 100%;
+            background: $white;
+            position: absolute;
+            bottom: 0;
+
+        }
+        .img-fluid {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 1.125rem!important;
+        }
+
+        .opportunity-item {
+            padding: 0!important;              
+           
+            h4 {
+                color: #12273C;
+                font-size: 14px; 
+                font-weight: bold; 
+                padding: 0 0 30px 0; 
+                margin: 0;
+            }
+
+            p {
+                font-size: 0.75rem !important;
+                color: #8c8c8c !important;
+            }
+
+            .content {
+                padding: 15px 15px 30px 15px;
+            }
+            
+        }
+        .cta {
+            position: absolute;
+            display: block;
+            background: $light-blue;
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.725rem;
+            text-align: center;
+            line-height: 2.25rem;
+            border-radius: 1.125rem;
+            padding: 0 1.25rem;
+            bottom: 24px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            z-index: 20;
+            @include media-breakpoint-up(md) {
+                width: 40%;
+                left: 75%;
+            }
+            @include media-breakpoint-up(lg) {
+                left: 50%;
+                width: 80%;
+            }
+        }
+        
+
+    }
+
+}

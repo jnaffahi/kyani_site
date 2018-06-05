@@ -1,0 +1,320 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'variables';
+@import 'mixins';
+@import 'menu-top';
+@import 'scroll-arrows';
+@import 'events';
+@import 'buttons';
+@import 'awards';
+@import 'TOH';
+//@import 'fleuresse';
+@import 'founders';
+@import 'article-blocks';
+@import 'modal';
+@import 'scroll-bar';
+
+.row-eq-height {
+    align-items: stretch;
+}
+html,
+body {
+    height: 100%;
+}
+
+button[type=button] {
+	cursor: pointer;
+	&.btn-primary {
+		background: $light-blue !important;
+		border-color: $light-blue !important;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		&:hover {
+			background: darken($light-blue,30%) !important;
+			border-color: darken($light-blue,30%) !important;
+		}
+	}
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: $white;
+    a {
+        color: $white;
+        @include dark-ghost($white);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Noto Sans', sans-serif;
+    }
+
+    .container.lg {
+        @include media-breakpoint-down(lg){
+            width: 100%;
+        }
+    }
+
+    a.light-blue-btn {
+        border: 0.0625rem solid;
+        border-radius: 1.125rem;
+        padding: 0.5625rem 1.75rem;
+        color: $white;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        text-align: center;
+        display: inline-block;
+		@include gral-button;
+    }
+
+    
+    .home-1 {
+        position: relative;
+        background: url(../assets/img/dist/Kyani-Triangle-Health.jpg) no-repeat center;
+        background-size: cover;
+        .content {
+            @include home1-content;
+        }
+        @include up(min-height, 19rem, 20rem, 26.4375rem, 26.4375rem);
+    }
+    .home-2 {
+        position: relative;
+        background: url(../assets/img/dist/fleuresse.jpg) no-repeat center;
+		background-size: cover;
+
+        .content {
+            @include home1-content;
+        }
+
+        @include up(min-height, 19rem, 20rem, 26.4375rem, 26.4375rem);
+    }
+    .home-3 {
+        color: $kyani-blue;
+        @at-root .find-out {
+            margin-bottom: 0.1rem;
+			margin-right: 0.75rem;
+        }
+        @at-root .about-us {
+            font-weight: 600;
+            @include media-breakpoint-up(lg){
+                font-weight: 600;
+            }
+        }
+        @at-root .find-out, .about-us {
+            @include media-breakpoint-up(sm){
+                display: inline-block;
+                margin-bottom: 0;
+            }
+
+            @include up(font-size, 1.625rem, 2.5rem, 2.9375rem, 3rem);
+        }
+
+        @include up(padding-top, 1.0625rem, 1.5625rem, 1.875rem, 1.875rem);
+        @include up(padding-bottom, 1.625rem, 1.75rem, 1.375rem, 1.375rem);
+    }
+    .home-4 {
+        @include home-4-caring-company;
+        .content.bbg {
+            @include media-breakpoint-down(sm){
+                border-bottom: 0.125rem solid $gray;
+            }
+            margin: 0;
+        }
+        .row.bbg {
+            @include media-breakpoint-up(md){
+                margin: 0;
+                &:not(.no-bb){
+                    border-bottom: 0.125rem solid $gray;
+                    @include media-breakpoint-up(lg){
+                        border-bottom: 0;
+                    }
+
+                    &.no-bor-from-md {
+                        @include media-breakpoint-between(sm, md) {
+                            padding-bottom: 0;
+                        }
+
+                        @include media-breakpoint-up(md) {
+                           // border-bottom: 0;
+                        }
+
+                        border-top: 0.125rem solid $gray;
+                        border-bottom: 0.125rem solid $gray;
+                    }
+                }
+
+                @include up(padding-top, 0, 1.875rem, 1.875rem, 1.875rem);
+                @include up(padding-bottom, 0, 1.875rem, 1.875rem, 1.875rem);
+            }
+
+            &.content {
+                @include media-breakpoint-only(lg) {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        .brg {
+            @include media-breakpoint-up(lg){
+                border-right: 0.0625rem solid $border-gray2;
+            }
+        }
+
+        .left {
+            @include up(padding-left, 1.25rem, 1.875rem, 1.5rem, 2rem);
+        }
+
+        .right {
+            @include up(padding-right, 1.25rem, 1.875rem, 1.5rem, 4.625rem);
+        }
+    }
+    .home-5 {
+        padding-top: 0.625rem;
+
+        .new {
+            padding: 1.25rem 0.9375rem;
+            @include home-5-new;
+            @for $i from 1 through 3 {
+                .img-#{$i} {
+                    background-image: url(../assets/img/dist/news_#{$i}.jpg);
+                    background-size: cover;
+                }
+            }
+        }
+        .new-btn {
+            margin-bottom: 1.25rem;
+            a {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                text-shadow: 0 0.0625rem 0 0 $white;
+                color: $light-blue3;
+                border: 0.0625rem solid $light-blue3;
+                border-radius: 1.5625rem;
+                display: block;
+                padding: 0.8125rem 0.6rem;
+
+                @include media-breakpoint-up(lg){
+                    color:$light-blue4;
+                }
+
+                @include dark-ghost($light-blue3);
+            }
+
+            hr {
+                border: 0.0625rem solid $blue3;
+            }
+            @include up(padding-top, 0.3rem, 0.3rem, 0.7rem, 0.9rem);
+        }
+    }
+    .social {
+        background-color: $gray-bg;
+        padding-top: 0.9375rem;
+        border-top: 1px solid $border-gray4;
+        .title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1.1875rem;
+            color: $blue2;
+            border-bottom: 0.0625rem solid $border-gray3;
+            padding-bottom: 0.625rem;
+            padding-left: 0;
+        }
+        .nets {
+            padding: 1.4375rem 0 1.25rem;
+            img {
+                @include media-breakpoint-between(xs, sm){
+                    width: 1.875rem;
+                    height: 1.875rem;
+                }
+            }
+
+            border-bottom: 0.0625rem solid $border-gray3;
+        }
+
+        @include up(padding-top, 0.9375rem, 0.9375rem, 25px, 25px);
+    }
+    .sitemap {
+        background-color: $gray-bg;
+        font-weight: 600;
+
+        h4 {
+            color: $blue4;
+            border-bottom: 0.0625rem solid $border-gray3;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding-bottom: 0.625rem;
+        }
+        ul {
+            padding-left: 0;
+            li {
+                a {
+                    color: $gray-text4;
+
+                    @include dark-link($gray-text4);
+                }
+                list-style: none;
+                font-size: 0.875rem;
+                padding-top: 1.25rem;
+            }
+        }
+
+        @include up(padding-top, 0, 0, 1.25rem, 2.5rem);
+    }
+
+    .contact {
+        background-color: $gray-bg;
+        .links {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            a {
+                color: $blue;
+                font-size: 0.875rem;
+                font-weight: 600;
+                line-height: 1.1875rem;
+                    margin: 0 0.75rem;
+
+                @include media-breakpoint-up(lg){
+                    color: $blue4;
+                }
+            }
+
+            @include media-breakpoint-up(md){
+                .l {
+                    text-align: right;
+                }
+                .r {
+                    text-align: left;
+                }
+            }
+
+            @include up(padding-top, 1rem, 2rem, 1.25rem, 2.5rem);
+        }
+    }
+    .rights {
+        color: $gray-text2;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        padding-bottom: 1.4375rem;
+    }
+
+    /** .social, .sitemap, .contact, .rights, .singlePage {
+
+        @include media-breakpoint-up(xl){
+            >.row {
+                width: 66.6667%;
+                margin: 0 auto !important;
+            }
+        }
+    }  *////
+}
+
+.menu-popup {
+    li.dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+}

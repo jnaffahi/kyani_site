@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>Kyani website</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Hotjar Tracking Code for www.kyani.com -->
+        <script>
+            (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:755807,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-85719370-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-85719370-1');
+</script>
+</head>
+
+<body class="home">
+    <div id="wrapper">
+        <div class="overlay"></div>
+        <!-- Sidebar -->
+        <div w3-include-html="views/menu-mobile.html"></div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <button  type="button" class="hamburger-menu close is-closed hidden-lg-up" data-toggle="offcanvas">
+                <span class="text">Close</span>
+                <span class="hamburguer">
+                    <img src="assets/img/dist/close.svg" alt="menu hamburguer icon">
+                </span>          
+        </button>
+        <button  type="button" class="hamburger-menu is-closed hidden-lg-up" data-toggle="offcanvas">
+                <span class="hamburguer">
+                    <img src="assets/img/dist/hamburguer.png" alt="menu hamburguer icon">
+                </span>
+        </button>
+        <div id="page-content-wrapper">
+            <button  type="button" class="hamburger is-closed hidden-lg-up" data-toggle="offcanvas"
+            w3-include-html="views/btn-menu.html"></button>
+            <div w3-include-html="views/menu.html"></div>
+
+         <!-- content start -->   
+            <div class="container-fluid banner bose" w3-include-html="views/home-banner.html"></div>
+            <div class="container-fluid" w3-include-html="views/products-2.html"></div>
+            <div class="container-fluid home-3" w3-include-html="views/find-out-more.html"></div>
+            <div class="container-fluid home-4" w3-include-html="views/caring-company.html" data-aos="fade-zoom-in" data-aos-duration="1000"></div>
+            <div class="container-fluid home-5" w3-include-html="views/product-3-with-date.html"></div>
+            <div class="container-fluid social px-md-4" w3-include-html="views/social.html"></div>            
+            <div class="container-fluid sitemap hidden-md-down px-md-4" w3-include-html="views/sitemap.html"></div>
+            <div class="container-fluid contact px-md-4" w3-include-html="views/contact-footer.html" ></div>
+        <!-- Content finish -->
+        
+        </div><!-- /#page-content-wrapper -->
+    </div>
+    <!-- /wrapper -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bose.slider.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/aos.js"></script>
+
+</body>
+</html>

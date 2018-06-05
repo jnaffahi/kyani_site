@@ -1,0 +1,49 @@
+.modal { 
+    z-index: 7000;   
+    .modal-dialog {
+        max-width: 620px;
+        margin: 30px auto;
+        @include up(margin, 100px 20px, 200px auto, 200px auto, 300px auto);
+        text-align: center;
+
+        .modal-content {
+            z-index: 8000;
+
+            .modal-header {
+                padding: 15px;
+                border-bottom: 0px solid #eceeef;
+
+                button.close {
+                    padding: 0;
+                    cursor: pointer;
+                    background: transparent;
+                    border: 0;
+                    -webkit-appearance: none;
+                    background-image: url(../assets/img/dist/close-black.svg);
+                    width: 15px;
+                    height: 16px;
+                    background-size: 100% auto;
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                }
+            }
+            .modal-body {
+                .frameVideo {
+                    position: relative;
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 56.25%;
+                    .video {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        
+    }
+}
