@@ -233,7 +233,7 @@
                     curImg.css({ opacity:0 });
                     curImg.stop().animate({
                         opacity: 1},
-                        settings.duration * 1000, function() {
+                        settings.duration * 500, function() {
                             if ( settings.onSlideEnd ) settings.onSlideEnd.call( this, currentImageIndex );
                             addActiveClass(currentImageIndex);
                     });

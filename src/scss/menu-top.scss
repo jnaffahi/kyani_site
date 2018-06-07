@@ -64,7 +64,7 @@
 
 /***** menu top *******/
 .menu-logo {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: $navbar-color-transparent;
     box-shadow: 0 -0.125rem 0.6875rem 0 rgba(0, 0, 0, 0.37);
     font-size: 0.875rem;
     line-height: 1.1875rem;
@@ -78,7 +78,7 @@
     top: 0;
     left: 0;
     &.sticky {
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: $navbar-color;
     }
     .navbar {
         background-color: transparent;
@@ -179,6 +179,13 @@
                 border-radius: 0;
                 li {
 					min-width: 200px;
+                    span {
+                        color: $white;
+                        font-weight: 700;
+                        display: block;
+                        padding: 14px 9px 9px;
+                        font-size: 14px;
+                    }
                     a {
                         padding: 9px;
                         border-top: solid 1px rgba(255, 255, 255, 0.3);
@@ -349,6 +356,19 @@ html {
     display: inline-block;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav li span {
+    color: $white;
+    font-weight: 700;
+    display: block;
+    padding: 15px 15px 10px 18px;
+    font-size: 16px;
+}
+
+.sidebar-nav li span.caret {
+    display: inline;
+    padding: 0;
 }
 
 .sidebar-nav li a {

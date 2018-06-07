@@ -115,7 +115,7 @@
         color: $gray-text;
         @include up(font-size, 1rem, 18px, 18px, 18px);
         @include media-breakpoint-up(lg){
-            color: $gray-text3;
+            color: $gray-general-text;
         }
     }
 }
@@ -237,7 +237,7 @@
 
             @include media-breakpoint-up(xl) {
                 font-size: 0.875rem;
-                color: $gray-text4;
+                color: $gray-general-text;
                 line-height: 20px;                
             }
         }

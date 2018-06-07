@@ -53,7 +53,15 @@ body {
     h6 {
         font-family: 'Noto Sans', sans-serif;
     }
-
+    h1 {
+        font-weight: bold;
+        color: $blue4;
+        text-transform: uppercase;
+        vertical-align: middle;
+        margin-bottom: 20px;
+        @include up(font-size, 1.5rem, 2rem, 2rem, 2rem);
+        @include up(line-height, 2rem, 2.375rem, 2.6875rem, 2.6875rem);
+    }
     .container.lg {
         @include media-breakpoint-down(lg){
             width: 100%;
@@ -253,9 +261,9 @@ body {
             padding-left: 0;
             li {
                 a {
-                    color: $gray-text4;
+                    color: $gray-general-text;
 
-                    @include dark-link($gray-text4);
+                    @include dark-link($gray-general-text);
                 }
                 list-style: none;
                 font-size: 0.875rem;
@@ -296,7 +304,7 @@ body {
         }
     }
     .rights {
-        color: $gray-text2;
+        color: $gray-general-text;
         font-size: 0.875rem;
         line-height: 1.1875rem;
         padding-bottom: 1.4375rem;

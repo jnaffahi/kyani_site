@@ -177,7 +177,7 @@
 
 .events-btn-container {
     margin-bottom: 30px;
-    color: $gray-text3;
+    color: $gray-general-text;
     font-size: 14px;
 
     .btn:first-child {
@@ -191,7 +191,7 @@
     select.form-control{
         width: 100%;
         display: block;        
-        color: $gray-text3;
+        color: $gray-general-text;
         font-size: 14px;
         @include media-breakpoint-up(sm) {
             display: inline-block;
